@@ -37,12 +37,13 @@
     "experiments": {
       "typedRoutes": true
     },
+    "owner": "benigne27",
     "extra": {
       "router": {
         "origin": false
       },
       "eas": {
-        "projectId": "1ec8b1c7-bd1e-4197-b542-612d6148b132"
+        "projectId": "85e44df0-19d6-4d9c-bcd8-125e53a43b33"
       }
     }
   }

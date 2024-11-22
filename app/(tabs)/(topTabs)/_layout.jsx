@@ -18,6 +18,10 @@ export default function TopLayout() {
     screenOptions={{
       swipeEnabled:true,
       animationEnabled:true,
+      tabBarIndicatorStyle:{
+        backgroundColor:'#5D3FD3',
+        height:5
+      },
       tabBarStyle:{
         backgroundColor:'#fafafa',
         width:width,
@@ -26,8 +30,8 @@ export default function TopLayout() {
         justifyContent:'flex-end'
       },
     }}>
-      <Top.Screen name="notifications" component={notifications} />
-      <Top.Screen name="oldNotes" component={oldNotes} />
+      <Top.Screen name="New" component={notifications} />
+      <Top.Screen name="Old" component={oldNotes} />
     </Top.Navigator>
   );
 }

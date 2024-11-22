@@ -18,7 +18,7 @@ const index = () => {
       <Link href={'/(tabs)'} asChild>
         <TouchableOpacity style={styles.getStarted}>
         
-          <Text style={styles.getStarted2}>Get Started</Text>
+          <Text style={styles.getStarted2}>👋 Get Started</Text>
           
         </TouchableOpacity>
      </Link>

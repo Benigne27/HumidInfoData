@@ -71,17 +71,17 @@ async function registerForPushNotificationsAsync() {
   }
 }
 
-export const SaveNote=async(note:object)=>{
-  try {
-    const oldNotes= await AsyncStorage.getItem('allNotes')
-    const notes= oldNotes? JSON.parse(oldNotes):[]
-    notes.push(note)
+// export const SaveNote=async(note:object)=>{
+//   try {
+//     const oldNotes= await AsyncStorage.getItem('allNotes')
+//     const notes= oldNotes? JSON.parse(oldNotes):[]
+//     notes.push(note)
     
-  } catch (error) {
-    console.error('Error found: ', error);
+//   } catch (error) {
+//     console.error('Error found: ', error);
     
-  }
-}
+//   }
+// }
 
 export default function AddNote() {
   const [expoPushToken, setExpoPushToken] = useState("");
