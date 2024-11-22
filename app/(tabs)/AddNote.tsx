@@ -61,7 +61,7 @@ async function registerForPushNotificationsAsync() {
           projectId,
         })
       ).data;
-      console.log(pushTokenString);
+      // console.log(pushTokenString);
       return pushTokenString;
     } catch (e: unknown) {
       handleRegistrationError(`${e}`);
@@ -135,6 +135,8 @@ export default function AddNote() {
       >
         <StatusBar barStyle={"dark-content"} />
         <SafeAreaView></SafeAreaView>
+        <View style={{height:20}}></View>
+        <Text style={{fontWeight:'bold', fontSize:20, paddingVertical:20}}>🔔 Public Notifications 🔔</Text>
         <TextInput
           value={title}
           onChangeText={setTitle}

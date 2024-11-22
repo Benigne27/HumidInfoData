@@ -48,7 +48,8 @@ const hourly = () => {
     <View style={styles.hourlyTab}>
       <SafeAreaView></SafeAreaView>
       <StatusBar barStyle={"dark-content"} />
-      <View>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={{height:30}}></View>
         <Text style={styles.humidityData}>Hourly Humidity:</Text>
         {todayHumData.length > 0 ? (
           todayHumData.map((entry, index) => (
@@ -65,14 +66,15 @@ const hourly = () => {
         ) : (
           <Text>No data available</Text>
         )}
-        <View>
+        <View style={{width:width}}>
           <View
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: 300,
-            }}
+            // style={{
+            //   display: "flex",
+            //   alignItems: "center",
+            //   justifyContent: "center",
+            //   // height: 300,
+            //   // width:width
+            // }}
           >
             <View style={{height:30}}></View>
             <View style={styles.humidityDataTab}>
@@ -82,7 +84,7 @@ const hourly = () => {
             </View>
             <LineChart
               data={chartData}
-              width={360}
+              width={350}
               height={250}
               chartConfig={{
                 backgroundGradientFrom: "#f5f5ee",
@@ -99,7 +101,7 @@ const hourly = () => {
               withInnerLines={false}
               style={{
                 shadowOffset: {
-                  width: 3,
+                  width: -3,
                   height: 5,
                 },
                 shadowColor: "gray",
@@ -109,7 +111,7 @@ const hourly = () => {
             />
           </View>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 };
@@ -120,7 +122,7 @@ const styles = StyleSheet.create({
   hourlyTab: {
     height: height,
     backgroundColor: "white",
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     display: "flex",
     alignItems: "center",
     paddingBottom: 80,

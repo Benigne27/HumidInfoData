@@ -1,6 +1,7 @@
 import {
   Dimensions,
   SafeAreaView,
+  // StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -8,6 +9,9 @@ import {
 } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import Carousel from "react-native-reanimated-carousel";
+
 const height = Dimensions.get("screen").height;
 const width = Dimensions.get("screen").width;
 
@@ -15,6 +19,7 @@ const index = () => {
   return (
     <View style={styles.MainIndex}>
       <SafeAreaView></SafeAreaView>
+      <StatusBar style="light"/>
       <Link href={'/(tabs)'} asChild>
         <TouchableOpacity style={styles.getStarted}>
         

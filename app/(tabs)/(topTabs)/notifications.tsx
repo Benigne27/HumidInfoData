@@ -58,9 +58,8 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
-      <SafeAreaView></SafeAreaView>
-
       <StatusBar barStyle={"dark-content"} />
+      <SafeAreaView></SafeAreaView>
       <View
         style={{
           display: "flex",
