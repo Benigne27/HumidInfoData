@@ -3,13 +3,13 @@ import {
   Dimensions,
   SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
   View,
 } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { LineChart } from "react-native-chart-kit";
+import { StatusBar } from "expo-status-bar";
 
 const height = Dimensions.get("screen").height;
 const width = Dimensions.get("screen").width;
@@ -45,10 +45,11 @@ const hourly = () => {
   };
 
   return (
+     <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor:'white'}}>
     <View style={styles.hourlyTab}>
       <SafeAreaView></SafeAreaView>
-      <StatusBar barStyle={"dark-content"} />
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <StatusBar style="dark"/>
+     
         <View style={{height:30}}></View>
         <Text style={styles.humidityData}>Hourly Humidity:</Text>
         {todayHumData.length > 0 ? (
@@ -68,13 +69,13 @@ const hourly = () => {
         )}
         <View style={{width:width}}>
           <View
-            // style={{
-            //   display: "flex",
-            //   alignItems: "center",
-            //   justifyContent: "center",
-            //   // height: 300,
-            //   // width:width
-            // }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: 300,
+              width:width
+            }}
           >
             <View style={{height:30}}></View>
             <View style={styles.humidityDataTab}>
@@ -111,8 +112,8 @@ const hourly = () => {
             />
           </View>
         </View>
-      </ScrollView>
-    </View>
+     
+    </View> </ScrollView>
   );
 };
 
@@ -121,7 +122,6 @@ export default hourly;
 const styles = StyleSheet.create({
   hourlyTab: {
     height: height,
-    backgroundColor: "white",
     paddingHorizontal: 10,
     display: "flex",
     alignItems: "center",
