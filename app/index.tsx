@@ -1,13 +1,12 @@
 import {
   Dimensions,
   SafeAreaView,
-  // StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
-import React from "react";
+import React from 'react';
 import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import Carousel from "react-native-reanimated-carousel";
